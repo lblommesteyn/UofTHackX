@@ -1,0 +1,27 @@
+/*Styling for css form put in the center middle of the page*/
+form {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #555;
+}
+
+/*Styling for result score*/
+#result {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ccc;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #555;
+}
