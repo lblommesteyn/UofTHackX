@@ -10,21 +10,32 @@
     <body>
         <h1>DONT BE RACIST AMONG OTHER THINGS</h1>
         <p>summary</p>
+        <div class="edi-form">
         <form id="edi-form">
-            <label for="company-name">Company Name:</label>
-            <input type="text" id="company-name" name="company-name" required>
-
-            <label for="website-link">Website Link:</label>
-            <input type="url" id="website-link" name="website-link" required>
-
-            <label for="twitter-link">Twitter Link:</label>
-            <input type="url" id="twitter-link" name="twitter-link" required>
-
-            <input type="submit" value="Submit">
+                <div class="user-box">
+                  <input type="text" name="" required="">
+                  <label>Company Name</label>
+                </div>
+                <div class="user-box">
+                  <input type="text" name="" required="">
+                  <label>Website URL</label>
+                </div>
+                <div class="user-box">
+                    <input type="text" name="" required="">
+                    <label>Twitter URL</label>
+                  </div>
+                <a href="#">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  Submit
+                </a>
         </form>
+    </div>
 
         <!-- Result score -->
-        <div id="result">
+        <div id="result", class="result">
             <h2>Result</h2>
             <p id="score"></p>
     </body>
