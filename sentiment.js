@@ -1,4 +1,18 @@
+const request = require('request');
+const cheerio = require('cheerio');
+
+
+
 console.log("Loading sentiment.js");
+
+function score( url ){
+    data = sentimize(webScraper(url));
+    var score = 0;
+    for (var i = 0; i < data.length; i++) {
+        if (sentiment(data[i]).localeCompare("positive")) score += sent_score(data[i]);
+    }
+    return score;
+}
 
 coHereTryCounter = 0;
 function sentiment(text){
@@ -49,3 +63,21 @@ function onResponseFromCohere(response){
 
     return result
 }
+function sentimize(paragraphs) {
+    let result =[];
+    for (let i = 0; i < paragraphs.length; i++) {
+        result.push(sentiment(paragraphs[i]));
+    }
+
+}
+
+function webScraper(url) {
+    request(url, (error, response, html) => {
+        if (!error && response.statusCode == 200) {
+            const $ = cheerio.load(html);
+            let paragraphs = $('p').toArray().map(el => $(el).text());
+            console.log(paragraphs);
+        }
+    });
+}
+
