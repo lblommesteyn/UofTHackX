@@ -33,7 +33,7 @@ function sentiment(text){
                     location.reload();
                 }
             } else {
-                onResponseFromCohere(cohereRequest.responseText);
+                return onResponseFromCohere(cohereRequest.responseText);
             }
         }
     }; 
@@ -41,10 +41,11 @@ function sentiment(text){
     
     let paramsAsJSON = JSON.stringify(cohere_props);
     cohereRequest.send(paramsAsJSON);
-
 }
 // function to handle response from cohere
 function onResponseFromCohere(response){
     let result = JSON.parse(response).classifications[0].prediction;
     console.log(result);
+
+    return result
 }
